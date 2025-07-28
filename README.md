@@ -6,10 +6,9 @@
 
 ## 📽️ Demo Walk-Through (YouTube)
 
-<!-- Replace the VIDEO_ID below with the actual ID once the video is published -->
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank">
-    <img src="https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg" alt="Voltage Park Kubernetes Demo – YouTube video thumbnail" width="640" />
+  <a href="https://www.youtube.com/watch?v=muDq4dP5K4k" target="_blank">
+    <img src="https://img.youtube.com/vi/muDq4dP5K4k/hqdefault.jpg" alt="Voltage Park Kubernetes Demo – YouTube video thumbnail" width="640" />
   </a>
 </p>
 
@@ -29,10 +28,7 @@ Feel free to copy-paste this manifest or adapt it for your own workloads.
 
 1. **Create a Voltage Park cluster** (if you haven’t already).
    ```bash
-   # Example – adjust specs to your needs
-   vp create-cluster demo-cluster --nodes 2 --gpu a100-80gb
-   vp get-kubeconfig demo-cluster > kubeconfig.demo
-   export KUBECONFIG=$PWD/kubeconfig.demo
+   export KUBECONFIG=~/Downloads/kubeconfig.yml
    ```
 2. **Verify you can reach the cluster**:
    ```bash
@@ -46,16 +42,18 @@ Feel free to copy-paste this manifest or adapt it for your own workloads.
    ```bash
    kubectl get pods -w
    ```
-5. **Clean up** when you’re done:
+5. **Set up port forward and visit the web UI**:
+   ```
+   kubectl port-forward -n llama svc/open-webui-svc 8080:80
+   ```
+6. **Clean up** when you’re done:
    ```bash
    kubectl delete -f demo.yaml
-   # or delete the whole cluster
-   vp delete-cluster demo-cluster --yes
    ```
 
 ---
 
 ## 📝 Prerequisites
 
-- A Voltage Park account with API access
+- A Voltage Park account
 - `kubectl`configured locally
