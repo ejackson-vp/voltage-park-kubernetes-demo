@@ -7,8 +7,8 @@
 ## 📽️ Demo Walk-Through (YouTube)
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=muDq4dP5K4k" target="_blank">
-    <img src="https://img.youtube.com/vi/muDq4dP5K4k/hqdefault.jpg" alt="Voltage Park Kubernetes Demo – YouTube video thumbnail" width="640" />
+  <a href="https://www.youtube.com/watch?v=umoUFgTwSls" target="_blank">
+    <img src="https://img.youtube.com/vi/umoUFgTwSls/hqdefault.jpg" alt="Voltage Park Kubernetes Demo – YouTube video thumbnail" width="640" />
   </a>
 </p>
 
